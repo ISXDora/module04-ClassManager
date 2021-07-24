@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;@400;700&display=swap" rel="stylesheet">
@@ -17,6 +19,7 @@
             <a href="https://discordapp.com/invite/gCRAFhc" target="blank">Comunidade</a>
             <a href="mailto:oi@rocketseat.com.br" target="blank">E-mail</a>
             <a href="tel:+5547992078767" target="blank">Telefone</a>
+            <a href="./home.html">Home</a>
         </div>
     </header>
     <main>
@@ -24,8 +27,8 @@
             <h1>Conteúdos</h1>
         </div>
     </main>
-    <section class="cards">
-        <div class="card">
+    <section class="cards" >
+        <div class="card" id="reactjs-autenticacao">
             <div class="card-image">
                 <img src="https://blog.rocketseat.com.br/content/images/2018/12/adonis-reactjs-react-native-8.png" alt="Imagem do Blog da Rocketseat">
             </div>
@@ -38,7 +41,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" id="react-material-ui">
             <div class="card-image">
                 <img src="https://blog.rocketseat.com.br/content/images/2018/12/react-material-ui.png" alt="Imagem do Blog da Rocketseat">
             </div>
@@ -51,7 +54,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" id="axios-um-cliente-http-full-stack">
             <div class="card-image">
                 <img src="https://blog.rocketseat.com.br/content/images/2020/09/axios-um-cliente-http-full-stack-rocketseat.png" alt="Imagem do Blog da Rocketseat">
             </div>
@@ -65,6 +68,20 @@
         </div>
         
     </section>
-    
+    <div class="modal-overlay active">
+        <div class="modal">
+            <a class="close-modal">
+                <i class="material-icons">close</i>
+            </a>
+            <a class="maximize-modal">
+                <i class="material-icons">maximize</i>
+            </a>
+
+            <div class="modal-content">
+                <iframe src="https://blog.rocketseat.com.br/" frameborder="0"></iframe>
+            </div>
+        </div>    
+    </div>
+    <script src="./scripts.js"></script>    
 </body>
 </html>
