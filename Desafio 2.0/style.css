@@ -26,7 +26,7 @@ header {
     box-shadow: 0px 3px 6px #99949460; ;
 }
 .menu {
-    max-width: 60%;
+    max-width: 70%;
     text-align: center;
 }
 .menu a {
@@ -38,7 +38,6 @@ header {
 }
 .menu a:hover {
     color: #28203e;
-    font-weight: bold;
     transition: all 0.2s;
 }
 
@@ -108,8 +107,42 @@ header {
     border-bottom: 1px solid #eee;
     box-shadow: 0px 10px 10px #99949460;
 }
-
-
+.cards {
+    max-width: 1000px;
+    height: 400px;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    grid-template-rows: 1fr;
+    
+}
+.card {
+    background-color: rgb(93 73 159 );
+    border-radius: 8px;
+}
+.card .card-image img {
+    width: 100%;
+    border-radius:8px;
+}
+.card-titulo,
+.card-info {
+    padding: 24px;
+}
+.card-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#card-temp-leitura {
+    background-color: rgb(93 73 159 );
+    filter: brightness(90%);
+    margin-top: -3px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: thin;
+    font-size:10px;
+}
 
 
 
