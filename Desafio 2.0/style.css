@@ -163,6 +163,13 @@ header {
     
     
 }
+.modal .maximize{
+    color: black;
+    position: absolute;
+    right: 35px;
+    top: 10px;
+    cursor: pointer;
+}
 .modal .close-modal {
     color: black;
     position: absolute;
