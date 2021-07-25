@@ -12,12 +12,17 @@ const modal = document.querySelector('.modal');
     
     document.querySelector('.close-modal').addEventListener("click", function(){
         modalOverlay.classList.remove('active')
+        modal.classList.remove('maximazed')
         modalOverlay.querySelector("iframe").src = ""
         
     })
 
 
 document.querySelector('.maximize').addEventListener("click", function(){
-    console.log(modal.classList.contains('maximize')) 
+    if(modal.classList.contains('maximaze')){
+        modal.classList.remove('maximazed')
+    }else {
+        modal.classList.add('maximazed')
+    }
 
 })

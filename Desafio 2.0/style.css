@@ -156,9 +156,9 @@ header {
 }
 .modal {
     background-color: white;
-    width: 90%;
-    height:90%;
-    margin: 5vh auto;
+    width: 60%;
+    height:70%;
+    margin: 15vh auto;
     position: relative;
     
     
@@ -192,6 +192,11 @@ header {
     visibility: visible;
 }
 
+.modal.maximazed {
+    width: 100%;
+    height:95%;
+    margin: 5vh auto;
+}
 
 
 
