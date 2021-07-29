@@ -19,45 +19,20 @@
         </div>
     </main>
     <section class="cards" >
-        <div class="card" id="reactjs-autenticacao">
+        {% for post in posts %}
+        <div class="card" id="{{post.id}}">
             <div class="card-image">
-                <img src="https://blog.rocketseat.com.br/content/images/2018/12/adonis-reactjs-react-native-8.png" alt="Imagem do Blog da Rocketseat">
+                <img src="{{post.image}}" alt="Imagem de {{post.image}}">
             </div>
             <div class="card-titulo">
-                <h2>Iniciando com ReactJS: Navegação e Autenticação com JWT</h2>
+                <h2>{{post.title}}</h2>
             </div>
             <div class="card-info">
-                <p>Por <strong>Higo Ribeiro</strong></p>
-                <small id="card-temp-leitura"> 11 MIN DE LEITURA</small>
+                <p>{{post.autor}}<strong>{{post.autorName}}</strong></p>
+                <small id="card-temp-leitura">{{post.duration}}</small>
             </div>
         </div>
-
-        <div class="card" id="react-material-ui">
-            <div class="card-image">
-                <img src="https://blog.rocketseat.com.br/content/images/2018/12/react-material-ui.png" alt="Imagem do Blog da Rocketseat">
-            </div>
-            <div class="card-titulo">
-                <h2>Integração do Material UI com ReactJS</h2>
-            </div>
-            <div class="card-info">
-                <p>Por <strong>Higo Ribeiro</strong></p>
-                <small id="card-temp-leitura"> 5 MIN DE LEITURA</small>
-            </div>
-        </div>
-
-        <div class="card" id="axios-um-cliente-http-full-stack">
-            <div class="card-image">
-                <img src="https://blog.rocketseat.com.br/content/images/2020/09/axios-um-cliente-http-full-stack-rocketseat.png" alt="Imagem do Blog da Rocketseat">
-            </div>
-            <div class="card-titulo">
-                <h2>Axios - um cliente HTTP Full Stack</h2>
-            </div>
-            <div class="card-info">
-                <p>Por <strong>Thiago Marinho</strong></p>
-                <small id="card-temp-leitura"> 3 MIN DE LEITURA</small>
-            </div>
-        </div>
-        
+        {% endfor %}
     </section>
     <div class="modal-overlay">
         <div class="modal">

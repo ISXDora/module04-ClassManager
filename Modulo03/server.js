@@ -2,6 +2,7 @@ const express = require('express');
 const nunjucks = require('nunjucks');
 
 const server = express();
+const posts = require("./data")
 
 server.set("view engine", "njk");
 
@@ -17,7 +18,7 @@ server.get("/about", function(req, res) {
     return res.render("about")
 });
 server.get("/courses", function(req, res) {
-    return res.render("courses")
+    return res.render("courses", { posts})
 });
 
 

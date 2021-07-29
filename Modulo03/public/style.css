@@ -126,6 +126,7 @@ footer {
     
 }
 .card {
+    display: grid;
     background-color: rgb(93 73 159 );
     border-radius: 8px;
 }
@@ -140,6 +141,7 @@ footer {
 .card-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 #card-temp-leitura {
     background-color: rgb(93 73 159 );
