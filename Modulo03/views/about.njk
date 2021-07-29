@@ -1,0 +1,26 @@
+    {% extends "layout.njk" %}
+
+    {% block head %}
+    <title>Sobre - Rocketseat</title>
+    {% endblock %}
+
+    {% block header%}
+    <a href="/courses" target="blank">Conteúdos</a>
+    {% endblock %}
+            
+    {% block content %}
+    <main>
+        <div class="main-content">
+            <img src="/logoRocket.jpeg" alt="Logo Rocketseat"/>
+            <h1>Rocketseat</h1>
+        </div>
+        <div class="main-list"> 
+            <p>Encontre a melhor etapa para você estudar programação</p>
+            <ul>
+                <li id="discover-li">Discover</li>
+                <li id="ignite-li">Ignite</li>
+                <li id="expertClub-li">Expert Club</li>
+            </ul>
+        </div>
+    </main>
+    {% endblock %}

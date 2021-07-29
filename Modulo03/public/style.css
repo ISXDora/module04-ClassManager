@@ -206,6 +206,15 @@ footer {
     margin: 5vh auto;
 }
 
+.page-not-found {
+    padding: 100px;
+    color: white;
+    font-size: 72px;
+    line-height: 82px;
+    text-align: center;
+    margin-top: 100px;
+}
+
 
 
 
