@@ -71,9 +71,10 @@ header {
     font-size: 24px;
     text-align: center;
     margin: 0 auto;
+    max-width: 800px;
 }
 .main-list ul {
-    margin-top: 24px;;
+    margin-top: 24px;
     list-style: none;
     text-align: center;
 }

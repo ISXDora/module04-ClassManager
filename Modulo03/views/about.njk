@@ -11,15 +11,15 @@
     {% block content %}
     <main>
         <div class="main-content">
-            <img src="/logoRocket.jpeg" alt="Logo Rocketseat"/>
-            <h1>Rocketseat</h1>
+            <img src="{{data.logoImg}}" alt="Logo Rocketseat"/>
+            <h1>{{data.nome}}</h1>
         </div>
         <div class="main-list"> 
-            <p>Encontre a melhor etapa para você estudar programação</p>
-            <ul>
-                <li id="discover-li">Discover</li>
-                <li id="ignite-li">Ignite</li>
-                <li id="expertClub-li">Expert Club</li>
+            <p>{{data.slogan}}</p>
+            <ul> 
+                {% for li in data.list %}
+                <li>{{li.name}}</li>
+                {% endfor %}
             </ul>
         </div>
     </main>

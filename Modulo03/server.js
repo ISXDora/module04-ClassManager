@@ -12,10 +12,21 @@ nunjucks.configure("views", {
     express:server
 });
 server.get("/", function(req, res) {
-       return res.render("courses")
+       return res.render("courses", { posts })
 });
 server.get("/about", function(req, res) {
-    return res.render("about")
+    const data = {
+        logoImg: "/logoRocket.jpeg",
+        nome: "Rocketseat",
+        slogan: "As melhores tecnologias em programação, direto ao ponto e do jeito certo. Conheça os nossos programas de estudo.",
+        list:[
+            {name: "Discover"},
+            {name: "Ignite"},
+            {name: "Expert Club"}
+        ]
+
+    }
+    return res.render("about", { data } )
 });
 server.get("/courses", function(req, res) {
     return res.render("courses", { posts})
