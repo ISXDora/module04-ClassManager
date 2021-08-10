@@ -9,7 +9,9 @@ server.set("view engine", "njk");
 server.use(express.static('public'))
 
 nunjucks.configure("views", { 
-    express:server
+    express:server,
+    noCache: true,
+    autoespace: false
 });
 server.get("/", function(req, res) {
        return res.render("courses", { posts })
@@ -32,6 +34,21 @@ server.get("/courses", function(req, res) {
     return res.render("courses", { posts})
 });
 
+
+server.get("/courses/:id", function(req, res) {
+    const id = req.params.id;
+    const post = posts.find(function(post){
+        console.log(post, id)
+         if(post.id == id){
+            return true
+        }
+        if(!post) {
+            return res.send("Post not found")
+        }
+    })
+
+    return res.render("post", {post})
+}) 
 
 server.use(function(req, res) {
     res.status(404).render("not-found");

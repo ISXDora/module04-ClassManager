@@ -1,0 +1,36 @@
+    {% extends "layout.njk" %}
+
+    {% block head %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <title>{{post.title}} - Rocketseat</title>
+    {% endblock %}
+
+    {% block header%}
+    <a href="/about" target="blank">Sobre</a>
+    <a href="/courses" target="blank">Conteúdos</a>
+    {% endblock %}
+            
+
+    {% block content %}
+    <main>
+        <div class="main-content" >
+            <h1>{{post.title}}</h1>
+        </div>
+    </main>
+    <section class="post" >
+        <div class="card" id="{{post.id}}">
+            <div class="card-image-post">
+                <iframe src="https://blog.rocketseat.com.br/{{post.id}}" frameborder="0"></iframe>
+            </div>
+            <div class="card-titulo-post">
+                <h2>{{post.title}}</h2>
+            </div>
+            <div class="card-info">
+                <p>{{post.autor}}<strong>{{post.autorName}}</strong></p>
+                <small class="card-temp-leitura-post">{{post.duration}}</small>
+            </div>
+        </div>
+    </section> 
+    {% endblock %}  

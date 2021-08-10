@@ -5,10 +5,16 @@ const modal = document.querySelector('.modal');
     for (let card of cards ){
         card.addEventListener("click", function(){
             const pageId = card.getAttribute("id");
+            window.location.href = `/courses/${pageId}`
+            /*
             modalOverlay.classList.add('active')
-            modalOverlay.querySelector("iframe").src = `https://blog.rocketseat.com.br/${pageId}/`
+            modalOverlay.querySelector("iframe").src = `https://blog.rocketseat.com.br/${pageId}/`*/
         })
     }
+    
+    /*
+    
+    ------------------------------------------------------USANDO MODAL--------------------------------------------------------------------------
     
     document.querySelector('.close-modal').addEventListener("click", function(){
         modalOverlay.classList.remove('active')
@@ -24,4 +30,5 @@ document.querySelector('.maximize').addEventListener("click", function(){
         modal.classList.add('maximazed')
     }
 
-})
+}) */
+
