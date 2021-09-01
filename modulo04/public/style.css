@@ -110,6 +110,36 @@ header {
     color: var(--primary-color)
 }
 
+/*====== form =====*/
+
+form input {
+    width:100%;
+    outline: none;
+    color: #777;
+    font-weight: bold;
+    font-size:18px;
+}
+input[type="radio"]{
+    width: initial;
+    margin-right: 4px;;
+}
+
+input[type="date"],
+input::placeholder{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+button[type="submit"]{
+    padding: 8px 32px;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    margin-top: 16px;
+    width: 100%;
+    color: white;
+    font-size:16px;
+}
+
 
 
 @keyframes up {
