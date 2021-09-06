@@ -42,11 +42,13 @@
          <div class="item">
             <div>Grau de Escolaridade</div>
             <div>
-                <input 
-                type="text" 
-                name="escolaridade"
-                placeholder="Ex.:Licenciatura em Letras" 
-                id="">
+                <select 
+                    name="schooling"
+                    >
+                    <option value="Ensino Médio Completo" >Ensino Médio Completo</option>
+                    <option value="Ensino Superior Completo" >Ensino Superior Completo</option>
+                    <option value="Mestrado e Doutorado" >Mestrao e Doutorado</option>
+                </select>                    
             </div>
         </div>
 
@@ -57,7 +59,7 @@
                <span
                ><input 
                type="radio" 
-               name="gender"
+               name="modality"
                value="presencial"
                id="">
                Presencial
@@ -66,7 +68,7 @@
                <span
                ><input 
                type="radio" 
-               name="gender"
+               name="modality"
                value="distancia"
                id="">
                À distância

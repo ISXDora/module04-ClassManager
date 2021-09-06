@@ -1,45 +1,14 @@
 {
   "instructors": [
     {
-      "avatar_url": "http://endereço/invalido",
-      "name": "Isadora de Sena Xavier",
-      "birth": "1992-03-10",
-      "escolaridade": "Técnico em Informática para Internet",
-      "gender": "presencial",
-      "services": "html, css, js"
-    },
-    {
-      "avatar_url": "http://endereço/invalido",
-      "name": "Isadora de Sena Xavier",
-      "birth": "1992-02-10",
-      "escolaridade": "Técnico em Informática para Internet",
-      "gender": "distancia",
-      "services": "html, css, js"
-    },
-    {
-      "avatar_url": "http://endereço/invalido",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66398122?s=400&u=5348040abaaf1ce91f054c19c23edb960852d8dd&v=4",
       "name": "Isadora Xavier",
-      "birth": 1630644483820,
-      "escolaridade": "Técnico em Informática para Internet",
-      "gender": "distancia",
-      "services": "html, css, js"
-    },
-    {
-      "avatar_url": "http://endereço/invalido",
-      "name": "Isadora Xavier",
-      "birth": 621388800000,
-      "escolaridade": "Técnico em Informática para Internet",
-      "gender": "distancia",
-      "services": "html, css, js"
-    },
-    {
-      "avatar_url": "http://endereço/invalido",
-      "name": "Isadora Xavier",
-      "birth": 621388800000,
-      "escolaridade": "Técnico em Informática para Internet",
-      "gender": "distancia",
+      "birth": 700185600000,
+      "schooling": "Ensino Médio Completo",
+      "modality": "presencial",
       "services": "html, css, js",
-      "created_at": 1630644652541
+      "created_at": 1630886817443,
+      "id": 1
     }
   ]
 }
