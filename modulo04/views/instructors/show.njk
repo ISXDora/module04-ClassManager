@@ -25,13 +25,13 @@
 
          <div class="item">
             <div>Tipo de Aula</div>
-            <div>{{teacher.modality}}</div>
+            <div>{{"Presencial" if teacher.modality == "P" else "À Distância"}}</div>
         </div>
 
          <div class="item">
             <div>Acompanhamento</div>
             <div>
-                {% for service in teacher.services%}
+                {% for service in teacher.services %}
                 <span>{{service}}</span>
                 {% endfor%}
             </div>
@@ -41,8 +41,7 @@
             <div>Desde</div>
             <div>{{teacher.created_at}}</div>
         </div>
-
-        </div>
+        <a class="button"href="#" >Editar</a>
     </section>
 </div>
 

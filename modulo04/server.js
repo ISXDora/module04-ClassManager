@@ -1,5 +1,6 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
+let {age} = require('./utils')
 const routes = require("./routes");
 
 const server = express();
@@ -15,6 +16,7 @@ nunjucks.configure("views", {
     noCache: true,
     autoespace: false
 });
+
 
 server.listen(5000, function () {
     console.log('Server is running');
