@@ -6,7 +6,7 @@
                     type="url" 
                     name="avatar_url"
                     placeholder="http://"
-                    id="">
+                    value="{{teacher.avatar_url}}">
             </div>
             </div>
             <div class="item">
@@ -16,7 +16,7 @@
                     type="text" 
                     name="name"
                     placeholder="Nome do professor"
-                    id="">
+                    value="{{teacher.name}}">
             </div>
             </div>
 
@@ -26,7 +26,7 @@
                 <input 
                     type="date" 
                     name="birth" 
-                    id="">
+                    value="{{teacher.birth}}">
             </div>
         </div>
 
@@ -35,10 +35,13 @@
             <div>
                 <select 
                     name="schooling"
-                    >
-                    <option value="Ensino Médio Completo" >Ensino Médio Completo</option>
-                    <option value="Ensino Superior Completo" >Ensino Superior Completo</option>
+                    >{%if teacher.schooling == "Ensino Médio Completo"%}
+                    <option value="Ensino Médio Completo">Ensino Médio Completo</option>
+                    {%elif teacher.schooling == "Ensino Superior Completo"%}
+                    <option value="Ensino Superior Completo">Ensino Superior Completo</option>
+                    {%else%}
                     <option value="Mestrado e Doutorado" >Mestrao e Doutorado</option>
+                    {% endif %}
                 </select>                    
             </div>
         </div>
@@ -47,24 +50,29 @@
             <div>Tipo de Aula</div>
             <div>
                
-               <span
-               ><input 
-               type="radio" 
-               name="modality"
-               value="P"
-               id="">
-               Presencial
+               <span>
+                    <input 
+                        type="radio" 
+                        name="modality"
+                        value="P" 
+                        {%if teacher.modality == "P"%}
+                            checked
+                        {% endif %}           
+                    >
+                    Presencial
                </span>
 
-               <span
-               ><input 
-               type="radio" 
-               name="modality"
-               value="D"
-               id="">
-               À distância
+               <span>
+                    <input 
+                        type="radio" 
+                        name="modality"
+                        value="D"
+                        {% if teacher.modality =="D" %}
+                            checked
+                        {% endif%}
+                    >
+                    À distância
                </span>
-               
             </div>
         </div>
 
@@ -75,7 +83,7 @@
                     type="text" 
                     name="services"
                     placeholder="Separe a área de atuação por vírgula"
-                    id="">
+                    value="{{teacher.services}}">
             </div>
         </div>
         <button type="submit">Salvar</button>
