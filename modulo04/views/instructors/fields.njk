@@ -35,13 +35,19 @@
             <div>
                 <select 
                     name="schooling"
-                    >{%if teacher.schooling == "Ensino Médio Completo"%}
-                    <option value="Ensino Médio Completo">Ensino Médio Completo</option>
-                    {%elif teacher.schooling == "Ensino Superior Completo"%}
-                    <option value="Ensino Superior Completo">Ensino Superior Completo</option>
-                    {%else%}
-                    <option value="Mestrado e Doutorado" >Mestrao e Doutorado</option>
-                    {% endif %}
+                    >
+                    <option 
+                        value="Ensino Médio Completo"{%if instructor.schooling == "Ensino Médio Completo"%}
+                        selected {%endif%}>Ensino Médio Completo
+                    </option>
+                    <option 
+                        value="Ensino Superior Completo" {%if instructor.schooling == "Ensino Superior Completo"%}
+                        selected {%endif%}>Ensino Superior Completo
+                    </option>
+                    <option 
+                        value="Mestrado e Doutorado"{%if instructor.schooling == "Mestrado e Doutorado"%} 
+                        selected {%endif%} >Mestrao e Doutorado
+                    </option>
                 </select>                    
             </div>
         </div>

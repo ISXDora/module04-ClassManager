@@ -6,19 +6,19 @@
       "birth": 700185600000,
       "schooling": "Ensino Médio Completo",
       "modality": "presencial",
-      "services": "html, css",
+      "services": "análise de requisitos, banco de dados, uml",
       "created_at": 1630886817443,
-      "id": 1
+      "id": "1"
     },
     {
       "avatar_url": "https://avatars.githubusercontent.com/u/66398122?s=400&u=5348040abaaf1ce91f054c19c23edb960852d8dd&v=4",
-      "name": "Isa",
-      "birth": 716256000000,
+      "name": "Isadora Senna",
+      "birth": 716083200000,
       "schooling": "Ensino Superior Completo",
       "modality": "D",
-      "services": "nunjunks, html, js, node",
+      "services": "nunjunks, html, js, node, express",
       "created_at": 1631021481533,
-      "id": 2
+      "id": "2"
     },
     {
       "avatar_url": "https://avatars.githubusercontent.com/u/66398122?s=400&u=5348040abaaf1ce91f054c19c23edb960852d8dd&v=4",
