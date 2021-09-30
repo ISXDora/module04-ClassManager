@@ -3,7 +3,18 @@ const data = require('./data.json')
 const {age, date} = require('./utils')
 
 
+exports.index = function (req, res) {
 
+    //const dataService = data.instructors
+
+    //const teacher = {
+    //    ...dataService,
+    //    services: dataService.services.split(", "),
+    //}
+
+   // console.log(teacher)
+       return res.render("instructors/index", {teachers: data.instructors})
+}
 //SHOW
 
 exports.show = function(req, res){
@@ -111,7 +122,7 @@ exports.put = function(req, res){
     fs.writeFile('data.json', JSON.stringify(data,null, 2), function(err){
         if(err) return res.send("Write error!")
 
-        return res.redirect(`/instructors/${id}`)
+        return res.redirect(`/instructors`)
     })
 
 }
