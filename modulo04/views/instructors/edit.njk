@@ -7,24 +7,29 @@
     style="background: url(http://source.unsplash.com/collection/n1V3XA1XJaE/500X500) no-repeat center center / cover">
     </section>
     <section class="details">
-        <form  method="post" action="/instructors?_method=PUT">
+        <form  id="form-edit" method="post" action="/instructors?_method=PUT">
     
             <h3>Editar Professor</h3>
 
             {% include 'instructors/fields.njk'%}
+
+            <div class="buttons">
+                <button form="form-edit" type="submit">Salvar</button>
+                <button form="form-delete" type="submit">Deletar</button>
+            </div>
+            
             <input 
                 type="hidden" 
                 name="id" 
-                value="{{teacher.id}}">   
+                value="{{teacher.id}}"> 
+                
         </form> 
 
-        <form class="form-delete" method="post" action="/instructors?_method=DELETE">
+        <form id="form-delete" method="post" action="/instructors?_method=DELETE">
              <input 
                 type="hidden" 
                 name="id" 
                 value="{{teacher.id}}"> 
-            <button type="submit">Deletar</button>
-
         </form>
 
     </section>

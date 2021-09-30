@@ -21,6 +21,8 @@ routes.put('/instructors', instructors.put)
 
 routes.post('/instructors', instructors.post)
 
+routes.delete('/instructors', instructors.delete)
+
 routes.get('/members', function (req, res) {
     return res.send("members")
 })

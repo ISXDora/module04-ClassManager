@@ -103,6 +103,7 @@ exports.put = function(req, res){
         ...foundTeacher,
         ...req.body,
         birth: Date.parse(req.body.birth),
+        id: Number(req.body.id),
     }
 
     data.instructors[index] = teacher
@@ -113,4 +114,19 @@ exports.put = function(req, res){
         return res.redirect(`/instructors/${id}`)
     })
 
+}
+
+exports.delete = function(req, res){
+    const {id} = req.body
+
+    const filteredTeachers = data.instructors.filter(function(teacher){
+        return teacher.id != id
+    })
+    data.instructors = filteredTeachers;
+
+    fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err){
+        if(err) return res.send("Write File error: " + err)
+
+        return res.redirect("/instructors")
+    })
 }

@@ -70,7 +70,6 @@ header {
 /*======= details =======*/
 .details {
     padding: 32px;
-    position: relative;
 }
 .details .item {
  border-top: 1px solid rgba(0,0,0,0.1);
@@ -148,25 +147,24 @@ a.button{
     font-size:16px;
 }
 
+
 a.button {
     display: block;
     text-align: center;
     text-decoration: none;
 }
 
-.form-delete button[type="submit"] {
-    background: lightcoral;
-    
+
+form .buttons {
+    display: flex;
+}
+.buttons button + button {
+    margin-left: 24px;
 }
 
-
-button[type="submit"]:nth-child(n){
-  display: flex;
-  position: absolute;
-  width: 45%;
+.buttons button[type="submit"]:nth-child(2){
+    background-color: lightcoral;
 }
-
-
 
 @keyframes up {
     from { 
