@@ -5,7 +5,7 @@ const {age, date} = require('./utils')
 
 exports.index = function (req, res) {
 
-    //const dataService = data.instructors
+    //const dataService = data.teachers
 
     //const teacher = {
     //    ...dataService,
@@ -13,14 +13,14 @@ exports.index = function (req, res) {
     //}
 
    // console.log(teacher)
-       return res.render("instructors/index", {teachers: data.instructors})
+       return res.render("teachers/index", {teachers: data.teachers})
 }
 //SHOW
 
 exports.show = function(req, res){
     const {id} = req.params
 
-    const foundTeacher = data.instructors.find(function(teacher){
+    const foundTeacher = data.teachers.find(function(teacher){
         return teacher.id == id
     })
     if(!foundTeacher){
@@ -34,7 +34,7 @@ exports.show = function(req, res){
         created_at: new Intl.DateTimeFormat('pt-BR').format(foundTeacher.created_at),
     }
 
-    return res.render('instructors/show', {teacher})
+    return res.render('teachers/show', {teacher})
   
     }
 
@@ -54,9 +54,9 @@ exports.post = function(req, res){
 
         birth = Date.parse(birth)
         const created_at = Date.now()
-        const id = Number(data.instructors.length+1)
+        const id = Number(data.teachers.length+1)
 
-        data.instructors.push({
+        data.teachers.push({
             avatar_url,
             name,
             birth,
@@ -70,7 +70,7 @@ exports.post = function(req, res){
         fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err){
             if(err) return res.send('Falha ao enviar dados');
 
-            return res.redirect("instructors")
+            return res.redirect("teachers")
         })
     
         //return res.send(req.body)
@@ -80,7 +80,7 @@ exports.post = function(req, res){
 exports.edit = function(req,res){
     const {id} = req.params
 
-    const foundTeacher = data.instructors.find(function(teacher){
+    const foundTeacher = data.teachers.find(function(teacher){
         return teacher.id == id
     })
     if(!foundTeacher){
@@ -92,7 +92,7 @@ exports.edit = function(req,res){
         birth: date(foundTeacher.birth)
     }
 
-    return res.render("instructors/edit", {teacher})
+    return res.render("teachers/edit", {teacher})
 }
 //========================PUT================================================
 
@@ -100,7 +100,7 @@ exports.put = function(req, res){
     const {id} = req.body
 
     let index = 0 
-    const foundTeacher = data.instructors.find(function(teacher, foundIndex){
+    const foundTeacher = data.teachers.find(function(teacher, foundIndex){
         if(id == teacher.id){
             index = foundIndex
             return true
@@ -117,12 +117,12 @@ exports.put = function(req, res){
         id: Number(req.body.id),
     }
 
-    data.instructors[index] = teacher
+    data.teachers[index] = teacher
 
     fs.writeFile('data.json', JSON.stringify(data,null, 2), function(err){
         if(err) return res.send("Write error!")
 
-        return res.redirect(`/instructors`)
+        return res.redirect(`/teachers`)
     })
 
 }
@@ -130,14 +130,14 @@ exports.put = function(req, res){
 exports.delete = function(req, res){
     const {id} = req.body
 
-    const filteredTeachers = data.instructors.filter(function(teacher){
+    const filteredTeachers = data.teachers.filter(function(teacher){
         return teacher.id != id
     })
-    data.instructors = filteredTeachers;
+    data.teachers = filteredTeachers;
 
     fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err){
         if(err) return res.send("Write File error: " + err)
 
-        return res.redirect("/instructors")
+        return res.redirect("/teachers")
     })
 }

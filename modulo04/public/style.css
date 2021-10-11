@@ -226,6 +226,10 @@ tbody tr td:first-child span {
     border: 2px solid white;
     
 }
+.table-container thead tr th:last-child,
+td:last-child {
+    text-align: center;
+}
 
 
 @keyframes up {

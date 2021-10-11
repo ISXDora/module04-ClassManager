@@ -7,11 +7,11 @@
     style="background: url(http://source.unsplash.com/collection/n1V3XA1XJaE/500X500) no-repeat center center / cover">
     </section>
     <section class="details">
-        <form  id="form-edit" method="post" action="/instructors?_method=PUT">
+        <form  id="form-edit" method="post" action="/teachers?_method=PUT">
     
             <h3>Editar Professor</h3>
 
-            {% include 'instructors/fields.njk'%}
+            {% include 'teachers/fields.njk'%}
 
             <div class="buttons">
                 <button type="submit">Salvar</button>
@@ -25,7 +25,7 @@
                 
         </form> 
 
-        <form id="form-delete" method="post" action="/instructors?_method=DELETE">
+        <form id="form-delete" method="post" action="/teachers?_method=DELETE">
              <input 
                 type="hidden" 
                 name="id" 
