@@ -1,6 +1,6 @@
 const fs = require('fs');
-const data = require('./data.json')
-const {age, date} = require('./utils')
+const data = require('../data.json')
+const {age, date} = require('../utils')
 
 
 exports.index = function (req, res) {
@@ -15,8 +15,6 @@ exports.index = function (req, res) {
    // console.log(teacher)
        return res.render("teachers/index", {teachers: data.teachers})
 }
-//SHOW
-
 exports.show = function(req, res){
     const {id} = req.params
 
@@ -37,9 +35,9 @@ exports.show = function(req, res){
     return res.render('teachers/show', {teacher})
   
     }
-
- 
-// CREATE
+exports.create = function (req, res) {
+    return res.render('teachers/create')
+}
 exports.post = function(req, res){
 
         const keys = Object.keys(req.body)
@@ -75,8 +73,6 @@ exports.post = function(req, res){
     
         //return res.send(req.body)
     }
-
-//=============================================EDIT ====================================================================================================
 exports.edit = function(req,res){
     const {id} = req.params
 
@@ -94,8 +90,6 @@ exports.edit = function(req,res){
 
     return res.render("teachers/edit", {teacher})
 }
-//========================PUT================================================
-
 exports.put = function(req, res){
     const {id} = req.body
 
@@ -122,11 +116,10 @@ exports.put = function(req, res){
     fs.writeFile('data.json', JSON.stringify(data,null, 2), function(err){
         if(err) return res.send("Write error!")
 
-        return res.redirect(`/teachers`)
+        return res.redirect(`teachers`)
     })
 
 }
-
 exports.delete = function(req, res){
     const {id} = req.body
 
@@ -138,6 +131,6 @@ exports.delete = function(req, res){
     fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err){
         if(err) return res.send("Write File error: " + err)
 
-        return res.redirect("/teachers")
+        return res.redirect("teachers")
     })
 }
