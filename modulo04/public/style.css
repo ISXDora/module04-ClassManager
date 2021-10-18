@@ -202,7 +202,8 @@ tbody tr td:first-child {
 tbody tr td:nth-child(2){
 
 }
-tbody tr td:last-child a {
+tbody tr td:last-child a,
+.table-container > a {
 
     background-color: var(--primary-color);
     padding: 8px 16px;
@@ -211,6 +212,10 @@ tbody tr td:last-child a {
     font-size: 12px;
     color: white;
     border-radius: 8px;
+}
+.table-container > a {
+    margin-bottom: 16px;
+    display: inline-block
 }
 tbody tr td:last-child a:hover {
     filter: brightness(90%);
