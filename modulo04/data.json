@@ -1,8 +1,9 @@
-{ "members": [],
+{
+  "members": [],
   "teachers": [
     {
       "avatar_url": "https://images.unsplash.com/photo-1522751707891-45b4e281010d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NHxuMVYzWEExWEphRXx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-      "name": "João ",
+      "name": "João da Silva",
       "birth": 516499200000,
       "schooling": "Mestrado e Doutorado",
       "modality": "P",

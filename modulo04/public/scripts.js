@@ -1,34 +1,10 @@
-const modalOverlay = document.querySelector('.modal-overlay');
-const cards =document.querySelectorAll('.card');
-const modal = document.querySelector('.modal');
+const currentPage = location.pathname
+const menuItems = document.querySelectorAll("header .menu a")
 
-    for (let card of cards ){
-        card.addEventListener("click", function(){
-            const pageId = card.getAttribute("id");
-            window.location.href = `/courses/${pageId}`
-            /*
-            modalOverlay.classList.add('active')
-            modalOverlay.querySelector("iframe").src = `https://blog.rocketseat.com.br/${pageId}/`*/
-        })
+for (item of menuItems){
+    if(currentPage.includes(item.getAttribute("href"))){
+        item.classList.add("active")
+        console.log(currentPage)
+        console.log(item)
     }
-    
-    /*
-    
-    ------------------------------------------------------USANDO MODAL--------------------------------------------------------------------------
-    
-    document.querySelector('.close-modal').addEventListener("click", function(){
-        modalOverlay.classList.remove('active')
-        modal.classList.remove('maximazed')
-        modalOverlay.querySelector("iframe").src = ""
-        
-    })
-
-document.querySelector('.maximize').addEventListener("click", function(){
-    if(modal.classList.contains('maximaze')){
-        modal.classList.remove('maximazed')
-    }else {
-        modal.classList.add('maximazed')
-    }
-
-}) */
-
+}
