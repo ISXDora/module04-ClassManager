@@ -18,7 +18,47 @@ module.exports = {
         const day = `0${date.getUTCDate()}`.slice(-2)
 
 
-        return `${year}-${month}-${day}`
-    }
+        return {
+            day,
+            month,
+            year,
+            iso: `${year}-${month}-${day}`,
+            birthDay: `${day}/${month}`
+        }
+    },
+
+    grade: function(schoolYear){
+
+        switch(schoolYear){
+            case '5EF':
+                return '5º ano do Ensino Fundamental'
+                break;
+            case '6EF':
+                return '6º ano do Ensino Fundamental'
+                break;
+            case '7EF':
+                return '7º ano do Ensino Fundamental'
+                break;
+            case '8EF':
+                return '8º ano do Ensino Fundamental'
+                break;
+            case '9EF':
+                return '9º ano do Ensino Fundamental'
+                break;
+            case '1EM':
+                return '1º ano do Ensino Médio'
+                break;
+            case '2EM':
+                return '2º ano do Ensino Médio'
+                break;
+            case '3EM':
+                return '3º ano do Ensino Médio'
+                break;
+            default:
+                return 'Ano letivo não informado.'
+                break;
+        }
+    
+    },
 }
 

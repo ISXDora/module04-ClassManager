@@ -1,5 +1,15 @@
 {
-  "members": [],
+  "students": [
+    {
+      "id": 2,
+      "avatar_url": "https://images.unsplash.com/photo-1544776188-2a8a069db1a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "name": "Laura",
+      "birth": 818899200000,
+      "email": "laura@email.com",
+      "schoolYear": "5EF",
+      "workload": "3"
+    }
+  ],
   "teachers": [
     {
       "avatar_url": "https://images.unsplash.com/photo-1522751707891-45b4e281010d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NHxuMVYzWEExWEphRXx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",

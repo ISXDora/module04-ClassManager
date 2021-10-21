@@ -4,7 +4,7 @@
 <div class="card">
     <section 
     class="avatar" 
-    style="background: url(http://source.unsplash.com/collection/n1V3XA1XJaE/500X500) no-repeat center center / cover">
+    style="background: url({{teacher.avatar_url}}) no-repeat center center / cover">
     </section>
     <section class="details">
         <form  id="form-edit" method="post" action="/teachers?_method=PUT">
@@ -31,6 +31,8 @@
                 name="id" 
                 value="{{teacher.id}}"> 
         </form>
+
+        {% include 'teachers/confirm.njk'%}
 
     </section>
 

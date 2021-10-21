@@ -215,7 +215,7 @@ tbody tr td:last-child a,
 }
 .table-container > a {
     margin-bottom: 16px;
-    display: inline-block
+    display: inline-block;
 }
 tbody tr td:last-child a:hover {
     filter: brightness(90%);
@@ -235,6 +235,10 @@ tbody tr td:first-child span {
 td:last-child {
     text-align: center;
 }
+tbody tr td p {
+    font-weight: bold;
+}
+
 
 
 @keyframes up {

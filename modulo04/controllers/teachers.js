@@ -1,6 +1,6 @@
 const fs = require('fs');
 const data = require('../data.json')
-const {age, date} = require('../utils')
+const {date, age} = require('../utils')
 
 
 exports.index = function (req, res) {
@@ -85,7 +85,7 @@ exports.edit = function(req,res){
 
     const teacher = {
         ...foundTeacher,
-        birth: date(foundTeacher.birth)
+        birth: date(foundTeacher.birth).iso
     }
 
     return res.render("teachers/edit", {teacher})

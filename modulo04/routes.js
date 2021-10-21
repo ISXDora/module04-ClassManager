@@ -1,6 +1,6 @@
 const express = require('express');
 const teachers = require('./controllers/teachers')
-const members = require('./controllers/members')
+const students = require('./controllers/students')
 const routes = express.Router()
 
 routes.get('/', function (req, res) {
@@ -16,12 +16,12 @@ routes.post('/teachers', teachers.post)
 routes.delete('/teachers', teachers.delete)
 
 
-routes.get('/members', members.index) 
-routes.get('/members/create', members.create)
-routes.get('/members/:id', members.show) 
-routes.get('/members/:id/edit', members.edit)
-routes.put('/members', members.put)
-routes.post('/members', members.post)
-routes.delete('/members', members.delete)
+routes.get('/students', students.index) 
+routes.get('/students/create', students.create)
+routes.get('/students/:id', students.show) 
+routes.get('/students/:id/edit', students.edit)
+routes.put('/students', students.put)
+routes.post('/students', students.post)
+routes.delete('/students', students.delete)
 
 module.exports = routes
