@@ -1,0 +1,43 @@
+{% extends 'layout.njk' %}
+
+{% block content%}
+<div class="card">
+    <section 
+    class="avatar" 
+    style="background: url({{teacher.avatar_url}}) no-repeat center center / cover">
+    </section>
+    <section class="details">
+        <form  id="form-edit" method="post" action="/teachers?_method=PUT">
+    
+            <h3>Editar Professor</h3>
+
+            {% include 'teachers/fields.njk'%}
+
+            <div class="buttons">
+                <button type="submit">Salvar</button>
+                <button form="form-delete" type="submit">Deletar</button>
+            </div>
+            
+            <input 
+                type="hidden" 
+                name="id" 
+                value="{{teacher.id}}"> 
+                
+        </form> 
+
+        <form id="form-delete" method="post" action="/teachers?_method=DELETE">
+             <input 
+                type="hidden" 
+                name="id" 
+                value="{{teacher.id}}"> 
+        </form>
+
+        {% include 'teachers/confirm.njk'%}
+
+    </section>
+
+
+</div>
+
+
+{% endblock %}

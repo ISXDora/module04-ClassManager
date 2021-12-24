@@ -1,0 +1,25 @@
+{
+  "students": [
+    {
+      "id": 4,
+      "avatar_url": "https://images.unsplash.com/photo-1519721782138-5de3d68a2b32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "name": "Liza Andrade",
+      "birth": 749779200000,
+      "email": "liza@email.com",
+      "schoolYear": "3EM",
+      "workload": "2"
+    }
+  ],
+  "teachers": [
+    {
+      "avatar_url": "https://images.unsplash.com/flagged/photo-1558990397-489e8f26f88c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=942&q=80",
+      "name": "Laura lee",
+      "birth": 797904000000,
+      "schooling": "Mestrado e Doutorado",
+      "modality": "D",
+      "services": "Geometria, Estatística",
+      "created_at": 1639678626775,
+      "id": 1
+    }
+  ]
+}
