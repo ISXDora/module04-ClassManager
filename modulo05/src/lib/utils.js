@@ -1,5 +1,5 @@
 module.exports = {
-    age: function(timestamp){ 
+    age(timestamp){ 
         const today = new Date()
         const birthDay = new Date(timestamp)
         let age = today.getFullYear() - birthDay.getFullYear()
@@ -11,7 +11,7 @@ module.exports = {
         return age
         
     },
-    date: function(timestamp){
+    date(timestamp){
         const date = new Date(timestamp)
         const year = date.getUTCFullYear()
         const month = `0${date.getUTCMonth() + 1}`.slice(-2)
@@ -27,7 +27,7 @@ module.exports = {
         }
     },
 
-    grade: function(schoolYear){
+    grade(schoolYear){
 
         switch(schoolYear){
             case '5EF':
