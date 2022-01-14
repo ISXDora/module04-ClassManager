@@ -25,8 +25,8 @@
             <div>
                 <input 
                     type="date" 
-                    name="birth" 
-                    value="{{teacher.birth}}">
+                    name="birth_date" 
+                    value="{{teacher.birth_date}}">
             </div>
         </div>
 
@@ -34,7 +34,7 @@
             <div>Grau de Escolaridade</div>
             <div>
                 <select 
-                    name="schooling"
+                    name="education_level"
                     >
                     <option 
                         value="Ensino Médio Completo"{%if teacher.schooling == "Ensino Médio Completo"%}
@@ -60,7 +60,7 @@
                <span>
                     <input 
                         type="radio" 
-                        name="modality"
+                        name="class_type"
                         value="P" 
                         {%if teacher.modality == "P"%}
                             checked
@@ -72,7 +72,7 @@
                <span>
                     <input 
                         type="radio" 
-                        name="modality"
+                        name="class_type"
                         value="D"
                         {% if teacher.modality =="D" %}
                             checked
@@ -88,9 +88,9 @@
             <div>
                 <input 
                     type="text" 
-                    name="services"
+                    name="subjects_taught"
                     placeholder="Separe a área de atuação por vírgula"
-                    value="{{teacher.services}}">
+                    value="{{teacher.subjects_taught}}">
             </div>
         </div>
         </div>
