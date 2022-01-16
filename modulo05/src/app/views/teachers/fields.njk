@@ -62,7 +62,7 @@
                         type="radio" 
                         name="class_type"
                         value="P" 
-                        {%if teacher.modality == "P"%}
+                        {%if teacher.class_type == "P"%}
                             checked
                         {% endif %}           
                     >
@@ -74,7 +74,7 @@
                         type="radio" 
                         name="class_type"
                         value="D"
-                        {% if teacher.modality =="D" %}
+                        {% if teacher.class_type =="D" %}
                             checked
                         {% endif%}
                     >

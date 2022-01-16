@@ -15,25 +15,23 @@
 
          <div class="item">
             <div>Idade</div>
-            <div>{{teacher.birth}}</div>
+            <div>{{teacher.birth_date}}</div>
         </div>
 
          <div class="item">
             <div>Grau de Escolaridade</div>
-            <div>{{teacher.schooling}}</div>
+            <div>{{teacher.education_level}}</div>
         </div>
 
          <div class="item">
             <div>Tipo de Aula</div>
-            <div>{{"Presencial" if teacher.modality == "P" else "À Distância"}}</div>
+            <div>{{"Presencial" if teacher.class_type == "P" else "À Distância"}}</div>
         </div>
 
          <div class="item">
             <div>Acompanhamento</div>
             <div>
-                {% for service in teacher.services %}
-                <span>{{service}}</span>
-                {% endfor%}
+               <span>{{teacher.subjects_taught| replace(",", " - ")}}</span>
             </div>
         </div>
 

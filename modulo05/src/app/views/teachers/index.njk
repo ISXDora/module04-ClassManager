@@ -19,7 +19,7 @@
                     {{teacher.name}}
                 </td>
                 <td>
-                    <span>{{teacher.services | replace(", ", " - ")}}</span>
+                <span>{{teacher.subjects_taught| replace(",", " - ")}}</span>
                 </td>
                 
                 <td><a href="/teachers/{{teacher.id}}">Ver</a></td>
