@@ -3,7 +3,7 @@ const db = require('../../config/db')
 
 module.exports = {
     all(callback) {
-        db.query('SELECT * FROM teachers', function (err, results) {
+        db.query('SELECT * FROM teachers ORDER BY name ASC', function (err, results) {
             if (err) throw `Database Error! ${err}`
 
             callback(results.rows)
@@ -44,6 +44,17 @@ module.exports = {
             if (err) throw `Database Error! ${err}`
             
             callback(results.rows[0])
+        })
+    },
+    findBy(filter, callback){
+        db.query(`
+        SELECT * 
+        FROM teachers 
+        WHERE teachers.name ILIKE '%${filter}%' 
+        OR teachers.subjects_taught ILIKE '%${filter}%'`, function(err,results){
+            if (err) throw `Database Error! ${err}`
+
+            callback(results.rows)
         })
     },
     update(data, callback){

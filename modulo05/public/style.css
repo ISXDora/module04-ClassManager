@@ -239,6 +239,33 @@ tbody tr td p {
     font-weight: bold;
 }
 
+/********************************* FILTER ************************************/
+
+.table-container .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.table-container .header a {
+    width: 120px;
+    margin: 0;
+}
+
+.table-container .header input {
+    border: 1px solid #eee;
+    padding: 0 8px;
+}
+
+.table-container .header form {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    gap: 8px;
+}
+.table-container .header form button {
+    margin: 0;
+}
 
 
 @keyframes up {
