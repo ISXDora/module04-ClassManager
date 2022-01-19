@@ -20,18 +20,35 @@ module.exports = {
     },
     index(req, res){
 
-        const { filter } = req.query 
+        let {filter, page, limit} = req.query
 
-        if ( filter ) {
-            Teacher.findBy( filter, function(teachers){
-                return res.render("teachers/index", {teachers} )
-            })
-        }else {
-            Teacher.all(function(teachers){
-                return res.render("teachers/index", {teachers} )
-            })
+        page = page || 1
+        limit = limit || 5
+        let offset = limit * (page - 1)
 
+        const params = {
+            filter,
+            page,
+            limit,
+            offset,
+            callback(teachers){
+                return res.render("teachers/index", {teachers})
+            }
         }
+
+        Teacher.paginate(params)
+        // const { filter } = req.query 
+
+        // if ( filter ) {
+        //     Teacher.findBy( filter, function(teachers){
+        //         return res.render("teachers/index", {teachers} )
+        //     })
+        // }else {
+        //     Teacher.all(function(teachers){
+        //         return res.render("teachers/index", {teachers} )
+        //     })
+
+        // }
 
     },
     create(req, res){
