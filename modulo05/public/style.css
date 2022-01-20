@@ -267,7 +267,31 @@ tbody tr td p {
     margin: 0;
 }
 
+/********************************* PAGINATION ************************************/
+.table-container {
+    display: grid;
+    grid-template: 64px 1fr 16px /1fr;
 
+}
+.table-container .header {
+    margin: 0;
+    align-self: start;
+}
+.table-container .pagination {
+    margin: 0;
+    align-self: end;
+    justify-self: center;
+}
+.pagination a, 
+.pagination span {
+    text-decoration: none;
+    margin-right: 16px;
+    color: var(--primary-color);
+}
+.pagination a:hover{
+    filter: brightness(0.2);
+    border-bottom: 1px solid var(--primary-color)
+}
 @keyframes up {
     from { 
         opacity: 0;
