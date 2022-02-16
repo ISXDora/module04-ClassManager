@@ -1,18 +1,23 @@
 async function printDouble(number){
-    setTimeout(
-      () => {
-        console.log(number * 2)
-      }, 
-      Math.floor(Math.random() * 100) + 1
-    ), 1
+
+  return new Promise((resolve) => {
+    setTimeout( () => {
+     resolve(number * 2)
+   }, 
+   Math.floor(Math.random() * 100) + 1
+  )
+  })
+      
   }
-  
-  async function printAll(){
-   await printDouble(5)
-   await printDouble(10)
-   await printDouble(22)
-   await printDouble(1)
-   await printDouble(89)
-  }
-  
+
+ printDouble(33).then(value => console.log(value))
+
+function printAll(){
+  printDouble(5).then(value => console.log(value))
+  printDouble(10).then(value => console.log(value))
+  printDouble(22).then(value => console.log(value))
+  printDouble(1).then(value => console.log(value))
+  printDouble(89).then(value => console.log(value))
+}
+
  printAll()
