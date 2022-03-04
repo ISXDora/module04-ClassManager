@@ -1,27 +1,29 @@
-function printDouble(number){
-
+function printDouble(number, result){
   const ms = Math.floor(Math.random() * 100) + 1
-  
-  return new Promise((resolve) => {
-    setTimeout(() => {
-       resolve(number * 2)
-   },ms)
-  })
-      
-  }
-
- function imprimeValor (value) {
+  const double = number * 2
+    return new Promise((resolve) => {
+      setTimeout(() => { resolve(double + result)},ms)}
+  )
+}
+/*  ========= Usando encadeamento .then ======
+   function imprimeValor (value) {
       console.log(value)
  }
+ printDouble(33).then(imprimeValor)  */
 
- printDouble(33).then(imprimeValor)
+ async function printAll(){
 
-function printAll(){
-  printDouble(5).then(imprimeValor)
-  printDouble(10).then(imprimeValor)
-  printDouble(22).then(imprimeValor)
-  printDouble(1).then(imprimeValor)
-  printDouble(89).then(imprimeValor)
+  let result;
+   result = await printDouble(5,2) 
+  console.log(result)
+   result = await printDouble(10, result)
+  console.log(result)
+   result = await printDouble(22, result)
+  console.log(result)
+   result = await printDouble(1, result)
+  console.log(result)
+   result = await printDouble(89, result)
+  console.log(result)
 }
 
 printAll()
